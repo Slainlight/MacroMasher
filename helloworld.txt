@@ -1,0 +1,21 @@
+mousePos 256 1429
+click left
+sleep 150
+word MS
+keyDown VK_SPACE
+keyUp VK_SPACE
+word NOTEPAD
+sleep 100
+keyDown VK_RETURN
+keyUp VK_RETURN
+sleep 500
+word HELLO
+keyDown VK_SPACE
+keyUp VK_SPACE
+word WORLD
+keyDown VK_RETURN
+keyUp VK_RETURN
+keyDown VK_SHIFT
+word CAPS
+keyUp VK_SHIFT
+ree

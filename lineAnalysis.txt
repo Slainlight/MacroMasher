@@ -1,0 +1,21 @@
+2 mousePos
+3 click
+6 sleep
+8 word
+0 keyDown
+1 keyUp
+8 word
+6 sleep
+0 keyDown
+1 keyUp
+6 sleep
+8 word
+0 keyDown
+1 keyUp
+8 word
+0 keyDown
+1 keyUp
+0 keyDown
+8 word
+1 keyUp
+-1 ree ERROR ON LINE
