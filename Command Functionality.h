@@ -9,8 +9,6 @@
 #include <sstream>
 #include <string>
 
-#include <SFML/Window.hpp>
-
 using namespace std;
 
 void funcKeyDown(istringstream& data);

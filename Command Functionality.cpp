@@ -25,7 +25,7 @@ void funcMousePos(istringstream& data)
 {
 	int x{ 0 }, y{ 0 };
 	data >> x >> y;
-	mouseMove(x, y);
+	setMousePosition(x, y);
 }
 
 void funcClick(istringstream& data)
@@ -63,12 +63,15 @@ void funcMouseReader(istringstream& data)
 	{
 		this_thread::sleep_for(chrono::milliseconds(500));
 
-		int x{ sf::Mouse::getPosition().x };
-		int y{ sf::Mouse::getPosition().y };
-		string msg = x + ", " + y;
-
-		cout << msg << endl;
-		output << msg << endl;
+		POINT cursorPos;
+		GetCursorPos(&cursorPos);
+		LONG x = 0;
+		LONG y = 0;
+		x = cursorPos.x;
+		y = cursorPos.y;
+		
+		cout << x << ", " << y << endl;
+		output << x << ", " << y << endl;
 	}
 	output.close();
 }
