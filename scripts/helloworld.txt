@@ -1,0 +1,25 @@
+keyDown VK_LWIN
+keyUp VK_LWIN
+sleep 200
+word MS
+keyDown VK_SPACE
+keyUp VK_SPACE
+word NOTEPAD
+sleep 200
+keyDown VK_RETURN
+keyUp VK_RETURN
+sleep 600
+key H 1
+word ELLO
+keyDown VK_SPACE
+keyUp VK_SPACE
+key W 1
+word ORLD
+sleep 2000
+keyDown VK_MENU
+keyDown VK_F4
+keyUp VK_MENU
+keyUp VK_F4
+sleep 10
+key VK_RIGHT
+key VK_RETURN

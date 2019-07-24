@@ -157,11 +157,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Command Functionality.cpp" />
+    <ClCompile Include="debug.cpp" />
     <ClCompile Include="File IO.cpp" />
     <ClCompile Include="Input Masher.cpp" />
     <ClCompile Include="Key Organization.cpp" />
     <ClCompile Include="Macro Masher.cpp" />
     <ClCompile Include="Utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Command Functionality.h" />
+    <ClInclude Include="File IO.h" />
+    <ClInclude Include="Input Masher.hpp" />
+    <ClInclude Include="Key Organization.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,15 +1,26 @@
-#include <sstream>
-#include <string>
-#include <fstream>
-#include <Windows.h>
-#include <iostream>
+// Created by Matthew Periut in 2019
 
-using namespace std;
+#include "File IO.h"
+#include "Key Organization.h"
 
-inline string getFileName()
+int getIntFile(string file)
+{
+	string temp;
+	int returnable = 0;
+	ifstream* option = new ifstream(file);
+
+	while (getline(*option, temp))
+	{
+		istringstream iss(temp);
+		iss >> returnable;
+	}
+	return returnable;
+}
+
+string getFileName()
 {
 	string temp = "";
-	ifstream* option = new ifstream("option.txt");
+	ifstream* option = new ifstream("scripts/option.txt");
 
 	while (getline(*option, temp))
 	{

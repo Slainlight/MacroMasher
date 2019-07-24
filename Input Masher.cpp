@@ -1,3 +1,5 @@
+// Created by Matthew Periut in 2019
+
 #include <Windows.h>
 #include <SFML/Window.hpp>
 #include <thread>
@@ -9,17 +11,17 @@ void mouseMove(int x, int y)
 
 void keyInteraction(int key, bool press = true)
 {
-	static INPUT ip;
-	static bool init = false;
+	INPUT ip;
+	//static bool init = false;
 
-	if (!init)
+	//if (!init)
 	{
 		// Set up a generic keyboard event.
 		ip.type = INPUT_KEYBOARD;
 		ip.ki.wScan = 0; // hardware scan code for key
 		ip.ki.time = 0;
 		ip.ki.dwExtraInfo = 0;
-		init = true;
+		//init = true;
 	}
 
 	ip.ki.wVk = key; // virtual-key code
@@ -74,6 +76,7 @@ void Click(int button)
 	SendInput(1, &Input, sizeof(INPUT));
 }
 
+// TODO: Remove SFML Dependency
 POINT GetMousePosition()
 {
 	static POINT m;

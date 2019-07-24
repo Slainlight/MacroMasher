@@ -1,6 +1,0 @@
-mousePos 1634 63
-click left
-keyDown A
-keyUp A
-mousePos 2131 514
-click right

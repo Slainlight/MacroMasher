@@ -1,0 +1,79 @@
+option.txt
+
+put file name in this file to run it when starting macro masher
+example "scripts/helloworld.txt"
+
+-
+
+loops.txt
+
+put in this file an integer of how many times you want your macro to repeat
+example: 1
+
+-
+
+How to input a keystroke.
+(A list of every key input is in resources/virtualKeys.txt)
+
+Make sure you make the key name ALL CAPS.
+key A
+key 0
+key VK_SPACE
+key VK_F4
+
+A small trick, to make a capital letter put a 1 after your letter
+key A 1
+
+-
+
+Most people don't want to peck out full words so you can use the word command
+
+MUST BE ALL CAPS (will be typed lowercase)
+Also cannot be more than 1 word
+
+word HIPPOPOTOMONSTROSESQUIPPEDALIOPHOBIA
+
+If you wanted to capitalize the first letter this is how:
+key H 1
+word IPPOPOTOMONSTROSESQUIPPEDALIOPHOBIA
+
+-
+
+sleep 500 ( this waits for 500 milliseconds, you can change the # of milliseconds)
+(1000 milliseconds = 1 second)
+
+-
+
+click left (all must be all lowercase)
+click right (all must have exact spelling)
+click middle (usually give a mouse position first)
+
+-
+
+mousePos 50 100 (moves your mouse 50 pixels right and 100 pixels down from top left)
+
+-
+
+Sometimes you need to hold a key for longer than a millisecond, in this case
+you can use the down and up commands
+keyDown A
+sleep 100
+keyUp A
+
+Also you can use combo keys like this
+keyDown VK_MENU (alt)
+keyDown VK_TAB
+keyUp VK_MENU
+keyUp VK_TAB
+
+CAUTION!!
+You must make the key come back up! If not you get very strange behavior
+
+-
+
+Debugging!
+After your script runs it created a lineAnalysis text file
+In this file it tells you what command you used and the number identifier
+if this identifier returns -1 then your command is invalid!
+This is probably because you typed it incorrectly and so it's the same
+number of lines down so you should be able to find it and fix it.

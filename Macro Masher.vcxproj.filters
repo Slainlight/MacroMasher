@@ -30,5 +30,25 @@
     <ClCompile Include="File IO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Command Functionality.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Input Masher.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="File IO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Key Organization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Command Functionality.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,39 +1,46 @@
-#include <sstream>
-#include <string>
-#include <fstream>
-#include <string>
+// Created by Matthew Periut in 2019
 
-using namespace std;
+#include "Key Organization.h"
 
 int strToVK(string key)
 {
 	ifstream vk("resources/virtualKeys.txt");
 	string line;
 
+	// extract variables
+	string identity;
+	string hexNum;
+
 	while (getline(vk, line))
 	{
-		string leKey;
-		string hexNum;
 		istringstream data(line);
-		data >> leKey >> hexNum;
-
-		unsigned int regNum;
 		stringstream ss;
-		ss << hex << hexNum;
-		ss >> regNum;
 
-		if (key == leKey)
+		// extract data
+		data >> identity >> hexNum;
+		if (key == identity)
 		{
-			return regNum;
+			unsigned int dec;
+
+			// convert from hex to deci
+			ss << hex << hexNum;
+			ss >> dec;
+
+			return dec;
 		}
 	}
 
 	return 0;
 }
 
-int stringToEnum(string t) //for type
+/*
+	This is a workaround for no string switches in cpp
+	There is most definitely a better way and I would look
+	into it if my set of strings was much larger.
+*/
+int stringToEnum(string t) // t for type
 {
-	int i = -1; //for identifier
+	int i = -1; // i for identifier
 
 	if (t == "keyDown")
 	{
@@ -70,6 +77,10 @@ int stringToEnum(string t) //for type
 	else if (t == "word")
 	{
 		i = 8;
+	}
+	else if (t == "key")
+	{
+		i = 9;
 	}
 
 	return i;
