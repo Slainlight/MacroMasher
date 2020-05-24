@@ -1,7 +1,13 @@
 // Created by Matthew Periut in 2019
 
 #include <Windows.h>
+#include <SFML/Window.hpp>
 #include <thread>
+
+void mouseMove(int x, int y)
+{
+	sf::Mouse::setPosition(sf::Vector2i(x, y));
+}
 
 void keyInteraction(int key, bool press = true)
 {
@@ -71,16 +77,25 @@ void Click(int button)
 }
 
 // TODO: Remove SFML Dependency
-
-void setMousePosition(int x, int y)
+POINT GetMousePosition()
 {
-	POINT mp;
-	mp.x = x;
-	mp.y = y;
+	static POINT m;
+	POINT mouse;
+	GetCursorPos(&mouse);
+	m.x = mouse.x;
+	m.y = mouse.y;
+	return m;
+}
 
+void SetMousePosition(POINT& mp)
+{
 	long fScreenWidth = GetSystemMetrics(SM_CXSCREEN) - 1;
 	long fScreenHeight = GetSystemMetrics(SM_CYSCREEN) - 1;
 
+	// http://msdn.microsoft.com/en-us/library/ms646260(VS.85).aspx
+	// If MOUSEEVENTF_ABSOLUTE value is specified, dx and dy contain normalized absolute coordinates between 0 and 65,535.
+	// The event procedure maps these coordinates onto the display surface.
+	// Coordinate (0,0) maps onto the upper-left corner of the display surface, (65535,65535) maps onto the lower-right corner.
 	float fx = mp.x * (65535.0f / fScreenWidth);
 	float fy = mp.y * (65535.0f / fScreenHeight);
 
