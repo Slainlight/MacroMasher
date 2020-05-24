@@ -8,13 +8,20 @@ You could use the tool as a way to give instructions on how to do something. (su
 My friend actually used it to send a discord message every 5 minutes on a 'cookie clicker' like bot system.
 You could write a quick macro to give you cookies in cookie clicker.
 
+# Usage Gifs
+![](demos/helloworld.gif)
+![](demos/cookies.gif)
+
 ## Development setup
 
-The only dependency is the Visual Studio regular libraries connected to Windows. Specifically <Windows.h>
-Version 1.0 has a dependency on SFML for mouse position and setting.
+SFML Library setup
+Visual Studio 2019
 
 ## Release History
 
+* 1.2
+    * Brought back SFML for highest compatibility
+    * Stable version for potential use in a graphical version
 * 1.1
     * Added functionality to type full words
     * Removed SFML dependency
@@ -24,7 +31,7 @@ Version 1.0 has a dependency on SFML for mouse position and setting.
 
 ## Meta
 
-Matthew Periut – [@SlainUmbreon](https://twitter.com/SlainUmbreon) – matthewperiut@gmail.com
+Matthew Periut – [@Matthew_periut](https://twitter.com/matthew_periut) – matthewperiut@gmail.com
 
 Distributed under the MIT license. See [here](https://en.wikipedia.org/wiki/MIT_License) for more information.
 
